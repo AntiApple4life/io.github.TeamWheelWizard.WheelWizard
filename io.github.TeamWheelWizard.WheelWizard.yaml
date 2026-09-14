@@ -10,9 +10,8 @@ sdk-extensions:
 
 finish-args:
   #- --device=dri
-  # Wayland is now supported, see https://github.com/TeamWheelWizard/WheelWizard/pull/468
-  - --socket=wayland
-  - --socket=fallback-x11
+  # WheelWizard supports Wayland, but Dolphin currently does not
+  - --socket=x11
   - --share=ipc
   - --env=DOTNET_ROOT=/app/lib/dotnet
   - --env=DOTNET_CLI_TELEMETRY_OPTOUT=true
